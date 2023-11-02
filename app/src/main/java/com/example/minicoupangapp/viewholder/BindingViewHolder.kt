@@ -15,7 +15,7 @@ abstract class BindingViewHolder<VB:ViewDataBinding>(
 
     open fun bind(item:ListItem){
         this.item = item
-        binding.setVariable(BR.item)
+        binding.setVariable(BR.item, this.item)
     }
 
 }
