@@ -33,6 +33,7 @@
             android:layout_marginTop="8dp"
             android:maxLines="3"
             android:ellipsize="end"
+            android:text="@{item.name}"
             tools:text="nameTextView-nameTextView-nameTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

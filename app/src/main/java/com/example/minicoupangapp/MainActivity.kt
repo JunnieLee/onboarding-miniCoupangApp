@@ -12,9 +12,10 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding : ActivityMainBinding
+
     private val viewModel : MainViewModel by viewModels()
 
-    private lateinit var binding : ActivityMainBinding
     private val adapter by lazy { PagingListAdapter() } // 호출 시점에 by lazy 정의에 의해서 초기화를 진행한다.
                                                 // val(immutable)에서만 사용이 가능하다.
                                                 // val이므로 값을 교체하는 건 불가능하다.
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             setContentView(root)
             recyclerView.adapter = adapter
         }
-
+        observeViewModel()
     }
 
     private fun observeViewModel(){

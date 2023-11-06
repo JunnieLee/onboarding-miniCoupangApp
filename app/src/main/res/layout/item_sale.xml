@@ -57,6 +57,7 @@
             android:layout_marginTop="8dp"
             android:maxLines="1"
             tools:text="nameText"
+            android:text="@{item.name}"
             android:ellipsize="end"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

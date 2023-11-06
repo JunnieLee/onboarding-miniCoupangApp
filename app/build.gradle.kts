@@ -43,7 +43,7 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.appcompat:appcompat:1.6.0")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
@@ -51,16 +51,25 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     implementation("androidx.activity:activity-ktx:1.6.1")
-    implementation("com.google.dagger:hilt-android:2.44.2")
-    implementation("com.google.dagger:hilt-compiler:2.44.2")
-
-    implementation("io.coil-kt:coil:2.2.2")
 
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    implementation("io.coil-kt:coil:2.2.2")
+
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
 
+    implementation("com.google.dagger:hilt-android:2.44.2")
+    // annotationProcessor("com.google.dagger:hilt-compiler:2.44.2") // kapt("com.google.dagger:hilt-compiler:2.44.2")
+    kapt("com.google.dagger:hilt-compiler:2.44.2")
+
     implementation("androidx.paging:paging-runtime:3.1.1")
-    implementation("androidx.activity:activity-ktx:1.6.1")
 }
+
+/*
+//hilt debugging
+kapt {
+    correctErrorTypes =true
+}
+ */
